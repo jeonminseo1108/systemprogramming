@@ -151,8 +151,8 @@ void handle_block_comment(char ch, char *prev_char, enum State *state, int *line
     	} 
 	else {
         	if (ch == '\n') {
+			(*line_cur)++;
             		putchar('\n');
-            		(*line_cur)++;
         	}
         	*prev_char = 0;
     	}
