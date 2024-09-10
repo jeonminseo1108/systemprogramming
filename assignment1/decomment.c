@@ -111,6 +111,7 @@ void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, i
             		*state = BLOCK_COMMENT;
             		*prev_char = 0;
 			*line_com = *line_cur;
+			putchar(' ');
         	} 
 		else {
             		putchar(ch);
@@ -134,7 +135,7 @@ void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, i
 	
     	if (ch == '\n') {
        		(*line_cur)++;
-		putchar('\n');
+		//putchar('\n');
     	}
 	return;
 }
