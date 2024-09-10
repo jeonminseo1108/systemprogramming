@@ -25,7 +25,7 @@ enum State {
 	CHAR_LITERAL
 };
 // handle functions declaration in each state
-void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur);
+void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, int *line_com);
 void handle_block_comment(char ch, char *prev_char, enum State *state, int *line_cur);
 void handle_line_comment(char ch, enum State *state, int *line_cur);
 void handle_string(char ch, enum State *state);
@@ -62,7 +62,7 @@ int main(void)
 		
     		switch(state){
 			case NORMAL:
-				handle_normal(ch, &prev_char, &state, &line_cur);		
+				handle_normal(ch, &prev_char, &state, &line_cur, &line_com);		
 				break;
 	
 			case BLOCK_COMMENT:
@@ -96,7 +96,7 @@ int main(void)
   	return(EXIT_SUCCESS);
 }
 // NORMAL state handler
-void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur) {
+void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, int *line_com) {
 	if (ch == '/') {
         	if (*prev_char == '/') {
             		*state = LINE_COMMENT;
@@ -110,6 +110,7 @@ void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur) {
         	if (*prev_char == '/') {
             		*state = BLOCK_COMMENT;
             		*prev_char = 0;
+			*line_com = *line_cur;
         	} 
 		else {
             		putchar(ch);
@@ -125,14 +126,15 @@ void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur) {
     	} 
 	else {
         	if (*prev_char == '/') {
-            		putchar(' ');
-            		*prev_char = 0;
+            		putchar('/');
         	}
         	putchar(ch);
+		*prev_char = 0;
     	}
 	
     	if (ch == '\n') {
        		(*line_cur)++;
+		putchar('\n');
     	}
 	return;
 }
@@ -150,9 +152,6 @@ void handle_block_comment(char ch, char *prev_char, enum State *state, int *line
         	if (ch == '\n') {
             		putchar('\n');
             		(*line_cur)++;
-        	} 
-		else {
-            		putchar(' ');
         	}
         	*prev_char = 0;
     	}
