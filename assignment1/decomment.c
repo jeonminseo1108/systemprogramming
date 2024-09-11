@@ -143,7 +143,7 @@ void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, i
 
 /* 
  * Handles characters in the BLOCK_COMMENT state. This state is 
- * for processing block comments that start with '/*' and end with '*/'.
+ * for processing block comments that start with '/ *' and end with '* /'.
  */
 void handle_block_comment(char ch, char *prev_char, enum State *state, int *line_cur) {
 	if (*prev_char == '*' && ch == '/') {
