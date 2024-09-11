@@ -186,13 +186,7 @@ void handle_line_comment(char ch, enum State *state, int *line_cur) {
  */
 void handle_string(char ch, enum State *state) {
     	putchar(ch);
-    	if (ch == '\\') {
-        	int ich = getchar();
-        	if (ich != EOF) {
-            		fprintf(stdout, "%c", (char)ich);
-        	}
-    	} 
-	else if (ch == '"') {
+	if (ch == '"') {
         	*state = NORMAL;
     	}
 	return;
@@ -204,13 +198,7 @@ void handle_string(char ch, enum State *state) {
  */
 void handle_char_literal(char ch, enum State *state) {
     	putchar(ch);
-    	if (ch == '\\') {
-        	int ich = getchar();
-        	if (ich != EOF) {
-            		fprintf(stdout, "%c", (char)ich);
-        	}
-    	}
-       	else if (ch == '\'') {
+       	if (ch == '\'') {
         	*state = NORMAL;
     	}
 	return;
