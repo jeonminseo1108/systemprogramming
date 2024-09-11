@@ -2,29 +2,27 @@
 #include <assert.h>
 #include <stdlib.h>
 
-/* This is skeleton code for reading characters from 
-standard input (e.g., a file or console input) one by one until 
-the end of the file (EOF) is reached. It keeps track of the current 
-line number and is designed to be extended with additional 
-functionality, such as processing or transforming the input data. 
-In this specific task, the goal is to implement logic that removes 
-C-style comments from the input. */
-
-/* State definition
- * NORMAL: 
- * LINE_COMMENT: 
- * BLOCK_COMMENT: 
- * STRING: 
- * CHAR_LITERAL: 
+/* 
+ * Author: Jeon minseo
+ * StudentID: 2019-19932
+ * Assignment: assignment1
+ * File: decomment.c
+ * 
+ * This program removes C-style comments from the input. It reads 
+ * characters one by one, processes them according to the current 
+ * state (NORMAL, LINE_COMMENT, BLOCK_COMMENT, STRING, CHAR_LITERAL), 
+ * and outputs the result with comments removed. 
  */
+
+
 enum State {
-	NORMAL,
-	LINE_COMMENT,
-	BLOCK_COMMENT,
-	STRING,
-	CHAR_LITERAL
+	NORMAL, // Normal text outside of comments and strings
+	LINE_COMMENT, // Line comment (//)
+	BLOCK_COMMENT, // Block comment (/* ... */)
+	STRING,// String literal ("...")
+	CHAR_LITERAL // Character literal ('...')
 };
-// handle functions declaration in each state
+// handle functions declaration for each state
 void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, int *line_com);
 void handle_block_comment(char ch, char *prev_char, enum State *state, int *line_cur);
 void handle_line_comment(char ch, enum State *state, int *line_cur);
@@ -41,25 +39,23 @@ int main(void)
   	char ch;
   	// prev_ch: previous character
   	char prev_char;
-	// state: present state
+	// state: current state
 	enum State state;
 
-	state = NORMAL;
+	state = NORMAL; // Initialize the state to NORMAL
   	line_cur = 1;
   	line_com = -1;
   	prev_char = 0;
 
   	// This while loop reads all characters from standard input one by one
   	while (1) {
-    		//int got_eof = 0;
 		
 		ich = getchar();
     		if (ich == EOF) 
       			break;
 	
 		ch = (char)ich;
-    		// TODO: Implement the decommenting logic
-		
+    		// Process the character according to the current state
     		switch(state){
 			case NORMAL:
 				handle_normal(ch, &prev_char, &state, &line_cur, &line_com);		
@@ -85,23 +81,28 @@ int main(void)
 				break;	
     		}	
 	}
-	
+	// If a block comment is still open, report an error
 	if (state == BLOCK_COMMENT) {
         	fprintf(stderr, "Error: line %d: unterminated comment\n", line_com);
                 return(EXIT_FAILURE);
 	}
 	if (prev_char == '/') {
-        	putchar(' ');
+        	putchar(' '); // Print a space if the last character was a '/'
 	}
   	return(EXIT_SUCCESS);
 }
-// NORMAL state handler
+
+/*
+ * Handles characters in the NORMAL state. This is the default state
+ * where no special comment or string parsing is occurring.
+ */
+
 void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, int *line_com) {
 	if (ch == '/') {
         	if (*prev_char == '/') {
             		*state = LINE_COMMENT;
             		*prev_char = 0;
-			putchar(' ');//
+			putchar(' '); // Replace the start of the line comment with a space
         } 
 		else {
             		*prev_char = ch;
@@ -112,7 +113,7 @@ void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, i
             		*state = BLOCK_COMMENT;
             		*prev_char = 0;
 			*line_com = *line_cur;
-			putchar(' ');
+			putchar(' '); // Replace the start of the block comment with a space
         	} 
 		else {
             		putchar(ch);
@@ -141,7 +142,10 @@ void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, i
 	return;
 }
 
-// BLOCK_COMMENT handler
+/* 
+ * Handles characters in the BLOCK_COMMENT state. This state is 
+ * for processing block comments that start with '/*' and end with '*/'.
+ */
 void handle_block_comment(char ch, char *prev_char, enum State *state, int *line_cur) {
 	if (*prev_char == '*' && ch == '/') {
         	*state = NORMAL;
@@ -160,7 +164,10 @@ void handle_block_comment(char ch, char *prev_char, enum State *state, int *line
 	return;	
 }
 
-// LINE_COMMENT state handle function 
+/* 
+ * Handles characters in the LINE_COMMENT state. This state is for 
+ * processing line comments that start with '//'.
+ */
 void handle_line_comment(char ch, enum State *state, int *line_cur) {
 	if (ch == '\t') {
 		putchar('\t');
@@ -174,7 +181,10 @@ void handle_line_comment(char ch, enum State *state, int *line_cur) {
 	return;
 }
 
-// STRING state handle function
+/* 
+ * Handles characters in the STRING state. This state is for processing 
+ * string literals which are enclosed in double quotes.
+ */
 void handle_string(char ch, enum State *state) {
     	putchar(ch);
     	if (ch == '\\') {
@@ -189,7 +199,10 @@ void handle_string(char ch, enum State *state) {
 	return;
 }
 
-// CHAR_LITERAL state handle function
+/* 
+ * Handles characters in the CHAR_LITERAL state. This state is for processing 
+ * character literals which are enclosed in single quotes.
+ */
 void handle_char_literal(char ch, enum State *state) {
     	putchar(ch);
     	if (ch == '\\') {
