@@ -1,0 +1,19 @@
+Name: Jeon minseo
+Student ID: 2019-19932
+Assignment Number: Assignment #1
+
+Description of Help and Collaboration:
+- Resolved issues by referring to lecture materials and Google searches. Additionally, leveraged experience from previous Linux kernel coding.
+
+Time Spent:
+- Approximately 3days spent on this assignment.
+
+Assessment of the Assignment:
+- This assignment helped me learn about `getchar` and `fprintf`, and provided practice in implementing DFA in C. 
+- I gained experience in writing state-based functions for different states of the DFA.
+
+Known Bugs:
+- Performed `diff` on the provided `test@.c` file and found no issues.
+
+Additional Information:
+- Handled the absence of information on `\t` by implementing it with an `if` statement.

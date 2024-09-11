@@ -10,13 +10,24 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~MSle0~/vs
+
 # Command Line History (newest to oldest):
 :q
-|2,0,1725496920,,"q"
+|2,0,1726031002,,"q"
+:wq
+|2,0,1726030708,,"wq"
+:q!
+|2,0,1726024624,,"q!"
+:Q
+|2,0,1725954320,,"Q"
 :wq!
 |2,0,1725438784,,"wq!"
 
 # Search String History (newest to oldest):
+?/vs
+|2,1,1726017546,47,"vs"
 
 # Expression History (newest to oldest):
 
@@ -25,44 +36,381 @@
 # Debug Line History (newest to oldest):
 
 # Registers:
+""-	CHAR	0
+	#
+|3,1,36,0,1,0,1726017547,"#"
 
 # File marks:
-'0  1  0  ~/assignment1/test_files/test1.c
-|4,48,1,0,1725496920,"~/assignment1/test_files/test1.c"
-'1  162  0  ~/assignment1/readme.md
-|4,49,162,0,1725496423,"~/assignment1/readme.md"
-'2  1  0  ~/sss
-|4,50,1,0,1725438784,"~/sss"
+'0  1  0  ~/2019-19932_assign1/readme
+|4,48,1,0,1726031002,"~/2019-19932_assign1/readme"
+'1  16  55  ~/2019-19932_assign1/readme.md
+|4,49,16,55,1726030920,"~/2019-19932_assign1/readme.md"
+'2  188  16  ~/assignment1/decomment.c
+|4,50,188,16,1726030709,"~/assignment1/decomment.c"
+'3  201  7  ~/assignment1/decomment.c
+|4,51,201,7,1726030541,"~/assignment1/decomment.c"
+'4  213  7  ~/assignment1/decomment.c
+|4,52,213,7,1726030541,"~/assignment1/decomment.c"
+'5  146  59  ~/assignment1/decomment.c
+|4,53,146,59,1726029706,"~/assignment1/decomment.c"
+'6  146  59  ~/assignment1/decomment.c
+|4,54,146,59,1726029706,"~/assignment1/decomment.c"
+'7  146  59  ~/assignment1/decomment.c
+|4,55,146,59,1726029706,"~/assignment1/decomment.c"
+'8  146  59  ~/assignment1/decomment.c
+|4,56,146,59,1726029706,"~/assignment1/decomment.c"
+'9  188  31  ~/assignment1/decomment.c
+|4,57,188,31,1726029569,"~/assignment1/decomment.c"
 
 # Jumplist (newest first):
--'  1  0  ~/assignment1/test_files/test1.c
-|4,39,1,0,1725496920,"~/assignment1/test_files/test1.c"
--'  162  0  ~/assignment1/readme.md
-|4,39,162,0,1725496423,"~/assignment1/readme.md"
--'  162  0  ~/assignment1/readme.md
-|4,39,162,0,1725496423,"~/assignment1/readme.md"
--'  1  0  ~/assignment1/readme.md
-|4,39,1,0,1725496392,"~/assignment1/readme.md"
--'  1  0  ~/assignment1/readme.md
-|4,39,1,0,1725496392,"~/assignment1/readme.md"
--'  1  0  ~/sss
-|4,39,1,0,1725438784,"~/sss"
--'  1  0  ~/sss
-|4,39,1,0,1725438784,"~/sss"
--'  1  0  ~/sss
-|4,39,1,0,1725438784,"~/sss"
--'  1  0  ~/sss
-|4,39,1,0,1725438784,"~/sss"
+-'  1  0  ~/2019-19932_assign1/readme
+|4,39,1,0,1726031002,"~/2019-19932_assign1/readme"
+-'  16  55  ~/2019-19932_assign1/readme.md
+|4,39,16,55,1726030920,"~/2019-19932_assign1/readme.md"
+-'  16  55  ~/2019-19932_assign1/readme.md
+|4,39,16,55,1726030920,"~/2019-19932_assign1/readme.md"
+-'  188  16  ~/assignment1/decomment.c
+|4,39,188,16,1726030709,"~/assignment1/decomment.c"
+-'  188  16  ~/assignment1/decomment.c
+|4,39,188,16,1726030709,"~/assignment1/decomment.c"
+-'  188  16  ~/assignment1/decomment.c
+|4,39,188,16,1726030709,"~/assignment1/decomment.c"
+-'  188  16  ~/assignment1/decomment.c
+|4,39,188,16,1726030709,"~/assignment1/decomment.c"
+-'  201  7  ~/assignment1/decomment.c
+|4,39,201,7,1726030674,"~/assignment1/decomment.c"
+-'  201  7  ~/assignment1/decomment.c
+|4,39,201,7,1726030674,"~/assignment1/decomment.c"
+-'  201  7  ~/assignment1/decomment.c
+|4,39,201,7,1726030674,"~/assignment1/decomment.c"
+-'  201  7  ~/assignment1/decomment.c
+|4,39,201,7,1726030674,"~/assignment1/decomment.c"
+-'  213  7  ~/assignment1/decomment.c
+|4,39,213,7,1726030541,"~/assignment1/decomment.c"
+-'  213  7  ~/assignment1/decomment.c
+|4,39,213,7,1726030541,"~/assignment1/decomment.c"
+-'  213  7  ~/assignment1/decomment.c
+|4,39,213,7,1726030541,"~/assignment1/decomment.c"
+-'  213  7  ~/assignment1/decomment.c
+|4,39,213,7,1726030541,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726030495,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726030495,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726030495,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726030495,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726030495,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726030495,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726030495,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726030495,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726029706,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726029706,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726029706,"~/assignment1/decomment.c"
+-'  146  59  ~/assignment1/decomment.c
+|4,39,146,59,1726029706,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029680,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029680,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029680,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029680,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029680,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029680,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029680,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029680,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029569,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029569,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029569,"~/assignment1/decomment.c"
+-'  189  14  ~/assignment1/decomment.c
+|4,39,189,14,1726029569,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029271,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029270,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029270,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029270,"~/assignment1/decomment.c"
+-'  1  17  ~/assignment1/decomment.c
+|4,39,1,17,1726029270,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726029021,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726028803,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726028803,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726028803,"~/assignment1/decomment.c"
+-'  102  16  ~/assignment1/decomment.c
+|4,39,102,16,1726028803,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
+-'  7  23  ~/assignment1/decomment.c
+|4,39,7,23,1726028773,"~/assignment1/decomment.c"
 
 # History of marks within files (newest to oldest):
+
+> ~/2019-19932_assign1/readme
+	*	1726030998	0
+	"	1	0
+
+> ~/2019-19932_assign1/readme.md
+	*	1726030918	0
+	"	16	55
+	^	16	56
+	.	16	40
+	+	37	175
+	+	18	196
+	+	18	198
+	+	1	16
+	+	2	21
+	+	3	31
+	+	9	20
+	+	6	141
+	+	7	0
+	+	17	0
+	+	19	86
+	+	12	231
+	+	12	0
+	+	12	113
+	+	13	1
+	+	16	40
+
+> ~/assignment1/decomment.c
+	*	1726030705	0
+	"	188	16
+	^	188	17
+	.	189	0
+	+	116	15
+	+	139	26
+	+	160	0
+	+	158	16
+	+	116	3
+	+	90	9
+	+	177	15
+	+	176	0
+	+	180	0
+	+	179	0
+	+	174	0
+	+	173	0
+	+	172	12
+	+	139	26
+	+	161	10
+	+	160	36
+	+	160	19
+	+	161	10
+	+	161	0
+	+	151	24
+	+	152	0
+	+	105	17
+	+	15	2
+	+	6	21
+	+	8	24
+	+	17	0
+	+	19	54
+	+	20	34
+	+	21	43
+	+	22	33
+	+	23	41
+	+	25	34
+	+	42	17
+	+	45	49
+	+	52	0
+	+	58	60
+	+	84	52
+	+	90	70
+	+	94	0
+	+	98	2
+	+	105	69
+	+	116	70
+	+	147	2
+	+	169	2
+	+	186	2
+	+	198	2
+	+	8	25
+	+	7	23
+	+	90	78
+	+	105	77
+	+	116	77
+	+	119	39
+	+	124	34
+	+	128	34
+	+	132	34
+	+	134	34
+	+	140	0
+	+	159	35
+	+	172	23
+	+	177	23
+	+	188	146
+	+	200	146
+	+	146	70
+	+	188	23
+	+	188	50
+	+	188	81
+	+	188	111
+	+	188	158
+	+	188	167
+	+	189	1
+	+	200	23
+	+	200	50
+	+	200	81
+	+	200	111
+	+	200	158
+	+	200	167
+	+	201	8
+	+	201	0
+	+	189	0
+
+> ~/assignment1/readme.md
+	*	1726024538	0
+	"	10	0
+
+> ~/assignment1/test_files/test0.c
+	*	1726020531	0
+	"	3	0
+
+> ~/assignment1/result/output20
+	*	1726017943	0
+	"	1	1
+
+> ~/assignment1/test_files/output10
+	*	1726017555	0
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/assignment1/test_files/output11
+	*	1725954198	0
+	"	1	0
+
+> ~/assignment1/test_files/output12
+	*	1725953898	0
+	"	1	0
+
+> ~/assignment1/output21
+	*	1725953870	0
+	"	16	0
 
 > ~/assignment1/test_files/test1.c
 	*	1725496906	0
 	"	1	0
-
-> ~/assignment1/readme.md
-	*	1725496420	0
-	"	162	0
 
 > ~/sss
 	*	1725438779	0
