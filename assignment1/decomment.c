@@ -161,11 +161,15 @@ void handle_block_comment(char ch, char *prev_char, enum State *state, int *line
 
 // LINE_COMMENT state handle function 
 void handle_line_comment(char ch, enum State *state, int *line_cur) {
+	if (ch == '\t') {
+		putchar('\t');
+	}
 	if (ch == '\n') {
         	*state = NORMAL;
-        	putchar('\n');
         	(*line_cur)++;
+		putchar('\n');
     	}
+
 	return;
 }
 
