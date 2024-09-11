@@ -101,6 +101,7 @@ void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, i
         	if (*prev_char == '/') {
             		*state = LINE_COMMENT;
             		*prev_char = 0;
+			putchar(' ');//
         } 
 		else {
             		*prev_char = ch;
