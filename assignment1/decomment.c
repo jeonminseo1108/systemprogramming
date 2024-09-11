@@ -87,7 +87,7 @@ int main(void)
                 return(EXIT_FAILURE);
 	}
 	if (prev_char == '/') {
-        	putchar(' '); // Print a space if the last character was a '/'
+        	fprintf(stdout, " "); // Print a space if the last character was a '/'
 	}
   	return(EXIT_SUCCESS);
 }
@@ -102,7 +102,7 @@ void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, i
         	if (*prev_char == '/') {
             		*state = LINE_COMMENT;
             		*prev_char = 0;
-			putchar(' '); // Replace the start of the line comment with a space
+			fprintf(stdout, " "); // Replace the start of the line comment with a space
         } 
 		else {
             		*prev_char = ch;
@@ -113,31 +113,30 @@ void handle_normal(char ch, char *prev_char, enum State *state, int *line_cur, i
             		*state = BLOCK_COMMENT;
             		*prev_char = 0;
 			*line_com = *line_cur;
-			putchar(' '); // Replace the start of the block comment with a space
+			fprintf(stdout, " "); // Replace the start of the line comment with a space
         	} 
 		else {
-            		putchar(ch);
+            		fprintf(stdout, "%c", ch);
         	}
     	} 
 	else if (ch == '"') {
         	*state = STRING;
-        	putchar(ch);
+        	fprintf(stdout, "%c", ch);
     	} 
 	else if (ch == '\'') {
         	*state = CHAR_LITERAL;
-        	putchar(ch);
+        	fprintf(stdout, "%c", ch);
     	} 
 	else {
         	if (*prev_char == '/') {
-            		putchar('/');
+            		fprintf(stdout, "/");
         	}
-        	putchar(ch);
+        	fprintf(stdout, "%c", ch);
 		*prev_char = 0;
     	}
 	
     	if (ch == '\n') {
        		(*line_cur)++;
-		//putchar('\n');
     	}
 	return;
 }
@@ -157,7 +156,7 @@ void handle_block_comment(char ch, char *prev_char, enum State *state, int *line
 	else {
         	if (ch == '\n') {
 			(*line_cur)++;
-            		putchar('\n');
+            		fprintf(stdout, "\n");
         	}
         	*prev_char = 0;
     	}
@@ -170,12 +169,12 @@ void handle_block_comment(char ch, char *prev_char, enum State *state, int *line
  */
 void handle_line_comment(char ch, enum State *state, int *line_cur) {
 	if (ch == '\t') {
-		putchar('\t');
+		fprintf(stdout, "\t");
 	}
 	if (ch == '\n') {
         	*state = NORMAL;
         	(*line_cur)++;
-		putchar('\n');
+		fprintf(stdout, "\n");
     	}
 
 	return;
@@ -190,7 +189,7 @@ void handle_string(char ch, enum State *state) {
     	if (ch == '\\') {
         	int ich = getchar();
         	if (ich != EOF) {
-            		putchar((char)ich);
+            		fprintf(stdout, "%c", (char)ich);
         	}
     	} 
 	else if (ch == '"') {
@@ -208,7 +207,7 @@ void handle_char_literal(char ch, enum State *state) {
     	if (ch == '\\') {
         	int ich = getchar();
         	if (ich != EOF) {
-            		putchar((char)ich);
+            		fprintf(stdout, "%c", (char)ich);
         	}
     	}
        	else if (ch == '\'') {
