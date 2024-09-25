@@ -545,3 +545,7 @@ cd ..
 tar zcf 2019-19932_assign1.tar.gz 2029-19932_assign1
 tar zcf 2019-19932_assign1.tar.gz 2019-19932_assign1
 ls
+git add .
+git commit -m "finish"
+git push
+vim gcc800
