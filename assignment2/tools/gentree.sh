@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------
-# System Programming                         I/O Lab                                      Fall 2023
+# System Programming                         I/O Lab                                      Fall 2024
 #
 # script to generate directory tree for testing
 #
